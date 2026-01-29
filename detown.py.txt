@@ -5,6 +5,8 @@ import random
 import re
 import time
 
+#testing, testing! 1, 2, 3!
+
 # PLAYER STATE
 
 def new_player():

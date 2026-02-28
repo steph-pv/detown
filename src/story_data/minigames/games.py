@@ -1,5 +1,4 @@
 #games data
-#import location
 
 Machine_Madness = {
     "name": "Machine Madness",
@@ -17,4 +16,6 @@ Go_Fish = {
     "money_per_win_max": 25,
     "tippable": False}
 
+
+ 
 

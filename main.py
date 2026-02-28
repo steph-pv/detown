@@ -4,111 +4,9 @@ import json
 import random
 import re
 import time
+from text import *
 
-# PLAYER STATE
 
-def new_player():
-    return {
-        "name": "",
-        "gender": "",
-        "favorite_color": "",
-        "bag": "",
-        "inventory": [],
-        "money": 0,
-        "charType": 0,
-        "remInv": 13
-    }
-
-# CHARACTER CREATION
-
-def get_name(player):
-    print("\nType your character’s name, then press enter:")
-    name = input("> ")
-    player["name"] = name
-    return ask_gender(player)
-
-def ask_gender(player):
-    while True:
-        print("\nEnter m for male or f for female:")
-        gender = input("> ").lower()
-        if re.fullmatch(r"m|male", gender, re.IGNORECASE):
-            player["gender"] = "male"
-            time.sleep(1)
-            print("\nNice to meet you!")
-            time.sleep(1)
-            return fav_color(player)
-        elif re.fullmatch(r"f|female", gender, re.IGNORECASE):
-            player["gender"] = "female"
-            time.sleep(1)
-            print("\nNice to meet you!")
-            time.sleep(1)
-            return fav_color(player)
-        else:
-            print("Invalid input.")
-
-def fav_color(player):
-    while True:
-        choice = str(input(
-            "\nWhat is your favorite color?\n"
-            "1. Red\n2. Blue\n3. Green\n4. Pink\n5. Orange\n6. Purple\n7. White\n8. Black\n"
-        )).strip()
-
-        colors = {
-            "1": "red", "2": "blue", "3": "green", "4": "pink",
-            "5": "orange", "6": "purple", "7": "white", "8": "black"
-        }
-
-        if choice in colors:
-            player["favorite_color"] = colors[choice]
-            return player
-        else:
-            print("Invalid choice. Try again.")
-
-# BAG SELECTION
-
-def choose_bag(player):
-    time.sleep(5)
-    print("\nWelcome to DeTown!")
-    time.sleep(3)
-    print("\nAfter months of preparation, years of planning, and hours of trail mix, your bus has arrived at the King-Parks Transit Station in downtown De.")
-    time.sleep(2)
-    print("\nYour new life is about to begin! Before you leave, make sure to grab your bag…")
-    time.sleep(1)
-
-    while True:
-        bag = input(
-            "\nWhich one is yours?\n"
-            "1. Monogrammed designer glider\n"
-            "2. Black leather duffel bag\n"
-            "3. Reusable grocery tote\n"
-        )
-
-        if bag == "1":
-            player["bag"] = "Monogrammed designer glider"
-            player["charType"] = 1
-            player["inventory"].append(player["bag"])
-            player["money"] += 500
-            break
-
-        elif bag == "2":
-            player["bag"] = "Black leather duffel bag"
-            player["charType"] = 2
-            player["inventory"].append(player["bag"])
-            player["money"] += 1000
-            break
-
-        elif bag == "3":
-            player["bag"] = "Reusable grocery tote"
-            player["charType"] = 3
-            player["inventory"].append(player["bag"])
-            player["money"] += 3500
-            break
-
-        else:
-            print("Invalid choice. Try again.")
-
-    print(f"\n** {player['bag']} added to inventory. **")
-    print(f"You now have ${player['money']}.")
     time.sleep(2)
     print("\nStepping off the bus, you\'re greeted by a mural of a classic muscle car across the cement wall if the station.")
     time.sleep(1)
@@ -127,61 +25,7 @@ def choose_bag(player):
     time.sleep(3)
     return player
 
-# SHOP SYSTEM
 
-def shop(player):
-    print("\nYou see a merchant selling goods. Take a look?")
-
-    while True:
-        choice = input("Enter y for yes, n for no:\n").lower()
-        if choice == "n":
-            return player
-        if choice == "y":
-            items = {
-                "1": {"name": "Artsy Art Deco designer(?) clutch", "description": "Authentic? Who knows…", "price": 75},
-                "2": {"name": "Bus pass", "description": "Half the station price.", "price": 10},
-                "3": {"name": "Diamond ring", "description": "Sparkly…", "price": 2000},
-                "4": {"name": "Computer tablet", "description": "Surf the web.", "price": 200},
-                "5": {"name": "Black Shinola backpack", "description": "Sometimes you want to switch it up.", "price": 250},
-                "6": {"name": "Styrofoam cooler", "description": "Just add ice.", "price": 35},
-                "7": {"name": "Athletic slides", "description": "Comfortable.", "price": 25}
-            }
-
-            print(f"\nYou have ${player['money']} and {player['remInv']} inventory slots.\n")
-
-            for key, item in items.items():
-                print(f"{key}. {item['name']} — {item['description']} (${item['price']})")
-
-            return buy_item(player, items)
-        print("Invalid choice.")
-
-def buy_item(player, items):
-    while True:
-        print("\nEnter item number to buy or c to cancel:\n")
-        choice = input('> ').lower()
-        if choice == "c":
-            return player
-        if choice not in items:
-            print("Invalid selection.")
-            continue
-
-        item = items[choice]
-
-        if item["price"] > player["money"]:
-            print("You don’t have enough money.")
-            continue
-        if player["remInv"] == 0:
-            print("Your inventory is full.")
-            return player
-
-        player["money"] -= item["price"]
-        player["inventory"].append(item["name"])
-        player["remInv"] -= 1
-
-        print(f"\nYou bought {item['name']}!")
-        print(f"Money left: ${player['money']}")
-        print(f"Inventory slots left: {player['remInv']}")
-        return player
 
 # HOTEL SCENE
 
@@ -247,16 +91,7 @@ def Vreeland(player):
         else:
             print("\nInvalid choice.")
 
-def save_game(player, filename="savefile.json"): 
-    with open(filename, "w") as f: 
-        json.dump(player, f, indent=4) 
-        print("\nGame saved.")
 
-def load_game(filename="savefile.json"):             
-    with open(filename, "r") as f: 
-         #player = json.load(f)
-        displayData = json.load(f)
-        print(displayData)
 
 # MAIN
 
@@ -274,7 +109,6 @@ def main():
         return main()
 
     get_name(player)
-    choose_bag(player)
     print('\nWhile leaving, a table catches your eye.')
     shop(player)
     hotel(player)

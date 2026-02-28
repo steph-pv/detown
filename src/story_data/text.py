@@ -39,7 +39,7 @@ def fav_color(player):
 
         if choice in colors:
             player["favorite_color"] = colors[choice]
-            return player
+            return choose_bag(player)
         else:
             print("Invalid choice. Try again.")
 

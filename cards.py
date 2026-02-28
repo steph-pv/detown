@@ -57,11 +57,12 @@ standard_deck = [
     {"suit": "Spades", "value": 2}, 
     {"suit": "Spades", "value": "Ace"}]
 
-def deal4(standard_deck):
+def deal4(deck):
+    working_deck = standard_deck.copy()
     i = 0
     your_hand = []
-    while i < 4:
-        r = len(standard_deck)
+    while i < 4 and len(working_deck) > 0:
+        r = len(working_deck)
         p = random.randint(0, r - 1)
         c = standard_deck[p]
 
@@ -71,7 +72,10 @@ def deal4(standard_deck):
         standard_deck.pop(p)
         # print("cards remaining in deck: ", len(standard_deck), /n)
         i = i + 1
+        print(c)
+    print(len(your_hand))
     print("You drew 4 cards.")
+    return your_hand
 
 #def draw():
 

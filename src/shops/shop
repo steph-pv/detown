@@ -1,0 +1,63 @@
+# SHOP SYSTEM
+
+def shop1(player):
+    print("\nYou see a merchant selling goods. Take a look?")
+
+    while True:
+        choice = input("Enter y for yes, n for no:\n").lower()
+        if choice == "n":
+            return player
+        if choice == "y":
+            items = {
+                "1": {"name": "Artsy Art Deco designer(?) clutch", "description": "Authentic? Who knows…", "price": 75},
+                "2": {"name": "Bus pass", "description": "Half the station price.", "price": 10},
+                "3": {"name": "Diamond ring", "description": "Sparkly…", "price": 2000},
+                "4": {"name": "Computer tablet", "description": "Surf the web.", "price": 200},
+                "5": {"name": "Black Shinola backpack", "description": "Sometimes you want to switch it up.", "price": 250},
+                "6": {"name": "Styrofoam cooler", "description": "Just add ice.", "price": 35},
+                "7": {"name": "Athletic slides", "description": "Comfortable.", "price": 25}
+            }
+
+            print(f"\nYou have ${player['money']} and {player['remInv']} inventory slots.\n")
+
+            for key, item in items.items():
+                print(f"{key}. {item['name']} — {item['description']} (${item['price']})")
+
+            return buy_item(player, items)
+        print("Invalid choice.")
+
+def shop(Annies):
+    skus = 4
+    for item in skus:
+    items = {
+        "1":
+    }
+
+def buy_item(player, items):
+    while True:
+        print("\nEnter item number to buy or c to cancel:\n")
+        choice = input('> ').lower()
+        if choice == "c":
+            return player
+        if choice not in items:
+            print("Invalid selection.")
+            continue
+
+        item = items[choice]
+
+        if item["price"] > player["money"]:
+            print("You don't have enough money.")
+            continue
+        if player["remInv"] == 0:
+            print("Your inventory is full.")
+            return player
+
+        player["money"] -= item["price"]
+        player["inventory"].append(item["name"])
+        player["remInv"] -= 1
+
+        print(f"\nYou bought {item['name']}!")
+        print(f"Money left: ${player['money']}")
+        print(f"Inventory slots left: {player['remInv']}")
+        return player
+

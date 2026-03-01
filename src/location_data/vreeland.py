@@ -34,3 +34,6 @@ def invite():
 def lobby():
     print("You are in the lobby.")
 
+### Narrative
+
+

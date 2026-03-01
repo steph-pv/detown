@@ -1,13 +1,13 @@
 # PLAYER STATE
 
-def new_player():
-    return {
-        "name": "",
-        "gender": "",
-        "favorite_color": "",
-        "bag": "",
-        "inventory": [],
-        "money": 0,
-        "charType": 0,
-        "remInv": 13
-    }
+class newPlayer:
+    def __init__(self):
+        #default values
+        self.name = name
+        self.gender = None
+        self.favorite_color = favorite_color
+        self.bag = bag
+        #call Inv class
+        self.money = 0
+        self.charType = charType
+        #inv capacity

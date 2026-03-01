@@ -12,6 +12,12 @@
     {"name": "pineapple Fantago" "description": "A glass of DeTown's finest.", "price": 2.5, "rarity": 0, "is_drink": True, special: True}}
 # special - foods that max hunger/thirst stats
 
+# East Market inventory
+# non-food vendors: Rachel's Fitness Center (receive a pair of running shoes);  
+# McGregor Landscaping (apply for a job); Iman Academy; 
+# Corrine's Sewing Circle (purchase garments), WordToYa Books
+# food-based vendors: Judy's Pies, M&M Produce, Cane Cousins Krazy Krab, 
+#  
 # Transit station inventory
 # 300 items
 # 50 rows currently

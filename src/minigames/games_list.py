@@ -16,6 +16,9 @@ Go_Fish = {
     "money_per_win_max": 25,
     "tippable": False}
 
+Agram = {
+    "name": "Agram"
+}
 
  
 

@@ -1,4 +1,5 @@
 # SHOP SYSTEM
+# classes that control shopping experience across all merchants
 
 def shop1(player):
     print("\nYou see a merchant selling goods. Take a look?")

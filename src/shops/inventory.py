@@ -18,6 +18,7 @@
 # Corrine's Sewing Circle (purchase garments), WordToYa Books
 # food-based vendors: Judy's Pies, M&M Produce, Cane Cousins Krazy Krab, 
 #  
+
 # Transit station inventory
 # 300 items
 # 50 rows currently
@@ -25,11 +26,11 @@
     {"name": "Pet pigeon", "description": "Smart, trainable, and birdcages are hard to come by.", "price": 75, "rarity": 50},
     {"name": "Computer tablet", "description": "Surf the web.", "price": 350, "rarity": 20, "flags": None},
     {"name": "Black and gold prayer mat with qibla", "description": "Always know what direction to pray in.", "price": 15, "rarity": 30},
-    {"name": "", "description": "", "price": 0, "rarity": 0},
-    {"name": "", "description": "", "price": 0, "rarity": 0},
-    {"name": "", "description": "", "price": 0, "rarity": 0},
-    {"name": "", "description": "", "price": 0, "rarity": 0},
-    {"name": "", "description": "", "price": 0, "rarity": 0},
+    {"name": "Gold-plated hoop earrings", "description": "", "price": 40, "rarity": 20},
+    {"name": "Prepaid cell phone", "description": "", "price": 65, "rarity": 50},
+    {"name": "Work boots", "description": "", "price": 0, "rarity": 0},
+    {"name": "Blender", "description": "", "price": 0, "rarity": 0},
+    {"name": "Half-price bus pass", "description": "", "price": 0, "rarity": 0},
     {"name": "", "description": "", "price": 0, "rarity": 0},
     {"name": "", "description": "", "price": 0, "rarity": 0},
     {"name": "", "description": "", "price": 0, "rarity": 0},

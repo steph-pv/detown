@@ -1,2 +1,2 @@
 # detown
-DeTown! A Python, text-based game
+DeTown! A text-based simulation game.

@@ -4,35 +4,40 @@ Characters = {
     "children": "Yusuf",
     "spouse": "Abu Yusuf",
     "industry": "logistics",
-    "social": 4,
+    "social": {"char_type": 4, "likes_actions": ["career", "school", "family", "faith", "favorite_memory" ], 
+        dislikes": ["propose", "make fun of"]}
     "flags": is_parent, is_student},
     
     {"name": "Ali",
     "age": "17",
     "is_parent": False,
     "industry": None,
-    "social": 4,
+    "social": {"char_type": None, "likes_actions": [], 
+        dislikes": []}
     "flags": is_student},
     
     {"name": "Liah",
     "age": 22,
     "is_parent": False
     "industry": philanthropy,
-    "social": 1
+    "social": {"char_type": 1, "likes_actions": [], 
+        dislikes": []}
     "flags": None},
     
     {"name": "Yusuf \'Georgie\'",
     "age": 13,
     "is_parent: False,
-    "parents": ["Juwaiyrah", "Abu Yusuf"],
+    "family": {"parents": ["Juwaiyrah", "Abu Yusuf"]},
     "industry": logistics,
-    "social": 4,
+    "social": {"char_type": 4, "likes_actions": [], 
+        dislikes": []}
     "flags": is_child, is_student},
     
     {"name": "Nadia"
     "age: 47
     "children": ["Ali", "Noor", "Mustafa"],
-    "social: 4,
+    "social: {"char_type": 4, "likes_actions": [], 
+        dislikes": []},
     "flags": is_parent},
     
     {"name": "Officer Jay",

@@ -11,6 +11,9 @@ class newPlayer:
         self.money = 0
         self.charType = charType
         #inv capacity
+        self.cleanliness = 100
+        self.fullness = 100
+        self.
 
     def get_name(player):
         print("\nType your character’s name, then press enter:")

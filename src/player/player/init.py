@@ -1,19 +1,19 @@
 # PLAYER STATE
 
-class newPlayer:
+class Player:
     def __init__(self):
         #default values
         self.name = name
         self.gender = None
         self.favorite_color = favorite_color
         self.bag = bag
-        #call Inv class
+        self.inventory = []
+        self.invcapacity = 13
         self.money = 0
-        self.charType = charType
-        #inv capacity
+        self.charType = None
         self.cleanliness = 100
         self.fullness = 100
-        self.
+        self.nature_calling = 0
 
     def get_name(player):
         print("\nType your character’s name, then press enter:")
@@ -58,6 +58,19 @@ class newPlayer:
             else:
                 print("Invalid choice. Try again.")
 
+class Inv(self):
+    def __init__(self):
+        self.inventory = inventory
+        self.invcapacity = invcapacity
+        
+    def addToInv(self, item):
+        if self.invcapacity > 0:
+            inventory = self.inventory
+            inventory.append(item)
+            print(f"{item} added to inventory.")
+            #invcapacity =- 1
+            return inventory
+            
 # BAG SELECTION
 class Bag:
     def choose_bag(player):
@@ -80,8 +93,9 @@ class Bag:
             if bag == "1":
                 player["bag"] = "Monogrammed designer glider"
                 player["charType"] = 1
-                player["inventory"].append(player["bag"])
-                player["money"] += 500
+                Inv.addToInv(self, bag)
+                #player["inventory"].append(player["bag"])
+                #player["money"] += 500
                 break
 
             elif bag == "2":

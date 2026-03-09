@@ -15,13 +15,13 @@ import time
 # needs timer pauses during interactions with other players and during certain scenarios (needs_timer == "OFF")
 
 class Bar:
-    def __init__:
-        self.fullness = 100
-        self.cleanliness = 100
-        self.nature_calling = 100 
+    def __init__(self)
+        self.fullness = fullness
+        self.cleanliness = cleanliness
+        self.nature_calling = nature_calling
 
-    def __str__:
-        return f"Fullness: {self.fullness}"
+    def __str__(self)
+        return f"Fullness: {self.fullness}, Cleanliness: {self.cleanliness}, Nature's Calling: {self.nature_calling)"
 
 
 #logic

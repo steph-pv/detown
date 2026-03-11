@@ -4,11 +4,9 @@
 
 #bon-vivant personalities: like talking about travel (OE), like exclusive clubs (Y/N)
 # 
-# Ask about: travel, exclusive clubs, food, work, hobbies, fashion, 
-# underground, 
-# Insult, argue with, grapple with (intellectuals), 
-# ask about school, public transportation, 
-
+# Ask about: travel, exclusive clubs, food, work, hobbies, fashion, underground, school, public transportation, hopes and dreams, family, 
+# Insult, argue with, compliment, give
+# Talk about/grapple with (intellectuals): the theory of the universe, 
 
 Questions = {“question”: “Ask about reading.” {“charType”: “1” {“response”: {“I’m a /total/ tabloid junkie.”, “Duh! Don’t we all?”}
     “charType”: “2” {“response”: “Sure, I do that sometimes, yeah.”}, {“response”: “C’mon man, get real.”},

@@ -1,42 +1,41 @@
 Characters = {
-    {"character": "Juwaiyrah",
-    "age": 30,
+    {"name": "Juwaiyrah",
+    age": 30,
     "children": "Yusuf",
     "spouse": "Abu Yusuf",
     "industry": "logistics",
     "social": 4,
-    "decision_binary": [0,1,0,1,0,0,1,1],
     "flags": is_parent, is_student},
     
-    {"character": "Ali",
+    {"name": "Ali",
     "age": "17",
     "is_parent": False,
     "industry": None,
     "social": 4,
     "flags": is_student},
     
-    {"character": "Liah",
+    {"name": "Liah",
     "age": 22,
     "is_parent": False
     "industry": philanthropy,
     "social": 1
-    "flags": []},
+    "flags": None},
     
-    {"character": "Yusuf \'Georgie\'",
+    {"name": "Yusuf \'Georgie\'",
     "age": 13,
     "is_parent: False,
     "parents": ["Juwaiyrah", "Abu Yusuf"],
     "industry": logistics,
     "social": 4,
-    "flags": []},
+    "flags": is_child, is_student},
     
-    {"character": "Nadia"
+    {"name": "Nadia"
     "age: 47
     "children": ["Ali", "Noor", "Mustafa"],
     "social: 4,
     "flags": is_parent},
     
-    {"character": "Officer Jay",
+    {"name": "Officer Jay",
     "age": 40,
     "children": "Danna"
     "has_spouse": False
@@ -44,22 +43,22 @@ Characters = {
     "social": None
     "flags": is_parent},
     
-    {"character": "Danna",
+    {"name": "Danna",
     "parent": "Officer Jay"
     "age": 16,
     "flags": is_student},
     
-    {"character": "Abu Yusuf",
+    {"name": "Abu Yusuf",
     "age": 32,
     "industry": philanthropy,
     "social": 4,
     "flags": is_parent}
 
-    {"character": "Zoelle",
+    {"name": "Zoelle",
     "age": 70,
     "industry": sales,
     "social": 1,
-    "flags": is_parent, has_business},
+    "flags": is_parent},
 
 }
 

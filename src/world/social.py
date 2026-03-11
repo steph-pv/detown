@@ -1,17 +1,7 @@
-# social dynamics
+from player import *
+from characters import *
 
-#In general: +2 social points per positive interaction
-
-#bon-vivant personalities: like talking about travel (OE), like exclusive clubs (Y/N)
-# 
-# Ask about: travel, exclusive clubs, food, work, hobbies, fashion, 
-# underground, 
-# Insult, argue with, grapple with (intellectuals), 
-# ask about school, public transportation, 
-
-from player import*
-from characters import*
-
+#decision binary: c = randomint.random(0,7), d = decision_binary[c], if d == "0": index dictionary social object
 Class social:
     def __init__(self, character):
         self.name = name
@@ -34,13 +24,5 @@ Class social:
     
     def ask(self, character):
 
-    Questions = {“question”: “Ask about reading.” {“charType”: “1” {“response”: {“I’m a /total/ tabloid junkie.”, “Duh! Don’t we all?”}
-    “charType”: “2” {“response”: “Sure, I do that sometimes, yeah.”}, {“response”: “C’mon man, get real.”},
-    "charType": "3" {"response: {"I thought you’d never ask!"}, {"I can spend hours reading programming documentation."},
-    "believer"
-    #so on and so forth
-    
-    #ask a charType 3 about a book three times in a conversation and receive a book
-    
 class Convo:
     def __init__(self):

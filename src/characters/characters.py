@@ -52,8 +52,13 @@ Characters = {
     "age": 32,
     "industry": philanthropy,
     "social": 4,
-    "flags": is_parent}
+    "flags": is_parent},
 
+    {"name": "Amira",
+     "age": 26,
+     "industry": "logistics",
+     "social": 4},
+     
     {"name": "Zoelle",
     "age": 70,
     "industry": sales,
